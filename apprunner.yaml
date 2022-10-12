@@ -5,4 +5,5 @@ build:
     build:
       - pip install pipenv
 run: 
-  command: python test.py
+  runtime-version: 3.7.10
+  command: python3 test.py
