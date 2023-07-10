@@ -2,7 +2,11 @@ version: 1.0
 runtime: python3 
 build:
   commands:
+    pre-build:
+      - echo "pre-build"
     build:
       - pip install pipenv
+    post-build:
+      - echo "post-build"
 run: 
   command: python test.py
