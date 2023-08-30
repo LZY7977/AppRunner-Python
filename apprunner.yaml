@@ -9,4 +9,5 @@ build:
     post-build:
       - echo "post-build"
 run: 
+  runtime-version: 3.8.15
   command: python test.py
