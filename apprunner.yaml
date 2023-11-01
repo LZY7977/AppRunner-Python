@@ -1,5 +1,5 @@
 version: 1.0
-runtime: python3 
+runtime: python311
 build:
   commands:
     pre-build:
@@ -9,5 +9,5 @@ build:
     post-build:
       - echo "post-build"
 run: 
-  runtime-version: 3.8.15
+  runtime-version: 3.11.6
   command: python test.py
