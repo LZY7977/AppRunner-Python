@@ -5,11 +5,9 @@ build:
     pre-build:
       - echo "pre-build"
     build:
-      - echo "installing pip"
-      - python3.11 -m ensurepip --upgrade
+      - echo "build"
     post-build:
-      - echo "checking pip version"
-      - pip3.11 --version
+      - echo "post-build"
 run: 
   runtime-version: 3.11.2
-  command: python test.py
+  command: python3.11 test.py
