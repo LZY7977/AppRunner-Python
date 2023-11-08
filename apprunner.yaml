@@ -5,9 +5,9 @@ build:
     pre-build:
       - echo "pre-build"
     build:
-      - echo "build"
+      - pip3.11 install -r requirements.txt
     post-build:
       - echo "post-build"
 run: 
   runtime-version: 3.11.2
-  command: python3.11 test.py
+  command: python3.11 server.py
