@@ -1,1 +1,1 @@
-zip
+pyramid==2.0
