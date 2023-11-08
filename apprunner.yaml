@@ -3,13 +3,14 @@ runtime: python311
 build:
   commands:
     pre-build:
-      - echo install pip
-      - python3.11 -m ensurepip --upgrade
+      - echo pre-build
     build:
-      - pip3.11 --version
-      - pip3.11 install -r requirements.txt
+      - echo build
     post-build:
-      - echo "post-build"
+      - echo post-build
 run: 
+  pre-run:
+    - python3.11 -m ensurepip --upgrade
+    - pip3.11 install -r requirements.txt
   runtime-version: 3.11.2
   command: python3.11 server.py
