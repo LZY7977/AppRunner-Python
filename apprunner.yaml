@@ -3,11 +3,19 @@ runtime: python311
 build:
   commands:
     pre-build:
-      - echo pre-build
+      - echo $env1
+      - echo $env2
     build:
-      - echo build
+      - echo $env1
+      - echo $env2
     post-build:
-      - echo post-build
+      - echo $env1
+      - echo $env2
+  env:
+    - name: env1
+      value: value1
+    - name: env2
+      value: value2
 run: 
   pre-run:
     - python3.11 -m ensurepip --upgrade
