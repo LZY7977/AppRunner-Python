@@ -3,22 +3,13 @@ runtime: python311
 build:
   commands:
     pre-build:
-      - echo $env1
-      - echo $env2
+      - echo pre-build
     build:
-      - echo $env1
-      - echo $env2
+      - echo build
     post-build:
-      - echo $env1
-      - echo $env2
-  env:
-    - name: env1
-      value: value1
-    - name: env2
-      value: value2
+      - echo post-build
 run: 
   pre-run:
-    - python3.11 -m ensurepip --upgrade
-    - pip3.11 install -r requirements.txt
+    - echo pre-run
   runtime-version: 3.11
   command: python3.11 server.py
